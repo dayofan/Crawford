@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Crawford.Web.Models.LossDataViewModel>;
+
+@{
+    ViewBag.Title = "Loss Data";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LossTypeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LossTypeCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LossTypeDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LossTypeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LossTypeCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LossTypeDescription)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
